@@ -13,6 +13,7 @@ install:
     - pip install coveralls
     - cd in-toto
     - pip install -e .
+    - export SIMPLE SETTINGS=toto.settings
     - cd ..
 script:
     - ./toto/toto-run.py --step-name funktest --products ./mytest --key bob -- echo
