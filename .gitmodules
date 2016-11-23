@@ -1,3 +1,6 @@
 [submodule "ssl_crypto"]
 	path = ssl_crypto
 	url = https://github.com/ankrypt/ssl_crypto.git
+[submodule "ssl_crypto"]
+        path = toto/ssl_crypto
+        url = https://github.com/ankrypt/ssl_crypto.git
