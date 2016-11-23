@@ -1,6 +1,0 @@
-[submodule "toto/ssl_crypto"]
-	path = toto/ssl_crypto
-	url = https://github.com/santiagotorres/ssl_crypto
-[submodule "ssl_crypto"]
-	path = ssl_crypto
-	url = git://github.com/vladimir-v-diaz/ssl_crypto.git
