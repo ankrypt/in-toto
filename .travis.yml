@@ -19,6 +19,7 @@ install:
     - cd ..
 script:
     - ./toto/toto-run.py --step-name funktest --products ./mytest --key bob -- echo
+    - ls -a
     - tox
 after_success:
     coveralls
