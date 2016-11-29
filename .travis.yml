@@ -17,3 +17,6 @@ install:
 script:
     - ./toto/toto-run.py --step-name funktest --products ./mytest --key bob -- echo
     - cat funktest.link
+    - git add -A
+    - git commit -m 'Uploading link metadata'
+    - git push
