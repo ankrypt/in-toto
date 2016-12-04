@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -o errexit -o nounset
+##set -o errexit -o nounset
 
 git config --global user.email "ankitc@gmail.com"
 git config --global user.name "ankrypt"
