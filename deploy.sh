@@ -2,18 +2,26 @@
 
 ##set -o errexit -o nounset
 
-#rev=$(git rev-parse --short HEAD)
-git remote set-url origin git@github.com:ankrypt/in-toto.git
-git config --global user.email "ankitc@gmail.com"
-git config --global user.name "ankrypt"
-git config credential.helper "store --file=.git/credentials"
-echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+rev=$(git rev-parse --short HEAD)
+#git remote set-url origin git@github.com:ankrypt/in-toto.git
+git init
+git config user.email "ankitc@gmail.com"
+git config user.name "ankrypt"
+#git config credential.helper "store --file=.git/credentials"
+#echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 
+git remote add upstream "https://$GH_TOKEN@github.com/ankrypt/in-toto.git"
+git fetch upstream
+git reset upstream/gh-pages
 
 git add -A .
-git status
-git commit -m "Uploading link metadata"
-git push origin
+git commit -m "rebuild pages at ${rev}"
+git push -q upstream HEAD:gh-pages
+
+#git add -A .
+#git status
+#git commit -m "Uploading link metadata"
+#git push origin
 
 #git tag -l 56 # timeout=10
 #git tag -a -f -m Jenkins Git plugin tagging with 56 56 # timeout=10
