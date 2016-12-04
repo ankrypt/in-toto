@@ -1,0 +1,25 @@
+{
+    "_type": "Link",
+    "byproducts": {
+        "stderr": "",
+        "stdout": ""
+    },
+    "command": [
+        "echo"
+    ],
+    "materials": {},
+    "name": "funktest",
+    "products": {
+        "mytest/lol.py": {
+            "sha256": "fee7d9a033c189c00936628da00a4dcae7205d0886562bc946cd7cdc19ef931f"
+        }
+    },
+    "return_value": 0,
+    "signatures": [
+        {
+            "keyid": "e02e1d7f3b51bb52db91adeb307e39c94e321d1f993eff76ae07399bb837379d",
+            "method": "RSASSA-PSS",
+            "sig": "5350111087ab870f3b91ab527d30abb24355a2bfc2bf766d2af65a82e26e3d17dd8746d68eef174cadab43ad776d2916534096b30f6c1ffb73dd1fa6eb10b60f705a0179f4c7d30e7ca85a2e5b1a8641ed8b2c3d244de74bc15c41622321886cf7da5b59a09570d4557fcfee5c0587c318afac8994ef3b8fabee834562ce8472167389caa79d35dac60acd6137fa4d9078d86cf58d1497d30c6057f81c33e4b46b47407598c4b1a1b800f450c16d327d7bed1e4cd6a9597fc351edce6fd3fac1ecdef6393c598e8e711641085fc8499fda13f25a2d8ed2e7a719eaf4993872f5328375f4bb9fd57ad77b66df86fb281897c1b91adfdb2fdaca4fc74ea430490bf9c4bcf6cd436230a385fcb9144f78490d55803cc900e4bb6adfa12e1ff06c07d8e7e2e14f56e3970d818523a61c338f01525b79c8ba5df48a2ad4fc11a9b977121a419799a9dbea968017f0681913b9b39101274e41b821349960857242ee8ed61ac1064ba629e12b5b71dff87ed5e246d4c90d3dfa7333f6163dd3f42ced76"
+        }
+    ]
+}
