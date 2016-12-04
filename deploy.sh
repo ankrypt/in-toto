@@ -16,7 +16,7 @@ git config --global user.email "ankitc@gmail.com"
 git config --global user.name "ankrypt"
 git config --global push.default simple
 git commit -am "updated generated documentation on webpage by travis-ci [ci skip]"
-git push https://$GH_TOKEN@github.com/ankrypt/in-toto HEAD:master
+git push https://$GH_TOKEN@github.com/ankrypt/in-toto HEAD:develop
 
 
 #git init
