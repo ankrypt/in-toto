@@ -3,7 +3,7 @@
 ##set -o errexit -o nounset
 
 rev=$(git rev-parse --short HEAD)
-
+git remote set-url origin git@github.com:ankrypt/in-toto.git
 git config --global user.email "ankitc@gmail.com"
 git config --global user.name "ankrypt"
 git config credential.helper "store --file=.git/credentials"
