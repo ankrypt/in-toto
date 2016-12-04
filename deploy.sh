@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 set -ev
 git add -A .
 git config --global user.email "ankitc@gmail.com"
