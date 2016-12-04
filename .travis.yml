@@ -17,5 +17,8 @@ install:
 script:
     - ./toto/toto-run.py --step-name funktest --products ./mytest --key bob -- echo
     - cat funktest.link
+after_script:
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 after_success:
   - bash deploy.sh
