@@ -12,4 +12,4 @@ echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 git add -A .
 git status
 git commit -m "Uploading link metadata"
-git push origin HEAD:master
+git push origin master
