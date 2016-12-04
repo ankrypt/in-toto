@@ -18,4 +18,5 @@ script:
     - ./toto/toto-run.py --step-name funktest --products ./mytest --key bob -- echo
     - cat funktest.link
 after_success:
+  - git remote -v
   - bash deploy.sh
