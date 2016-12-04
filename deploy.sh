@@ -10,11 +10,20 @@
 #git config credential.helper "store --file=.git/credentials"
 #echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 
-git init
-git checkout -b gh-pages
-git add .
-git -c user.name='ankrypt' -c user.email='ankitc@gmail.com' commit -m init
-git push -f https://ankrypt:$GH_TOKEN@github.com/ankrypt/in-toto-gh-pages gh-pages &2>/dev/null
+set -ev
+git add -A .
+git config --global user.email "ankitc@gmail.com"
+git config --global user.name "ankrypt"
+git config --global push.default simple
+git commit -am "updated generated documentation on webpage by travis-ci [ci skip]"
+git push https://$GH_TOKEN@github.com/ankrypt/in-toto
+
+
+#git init
+#git checkout -b gh-pages
+#git add .
+#git -c user.name='ankrypt' -c user.email='ankitc@gmail.com' commit -m init
+#git push -f https://ankrypt:$GH_TOKEN@github.com/ankrypt/in-toto-gh-pages gh-pages &2>/dev/null
 
 #git remote add upstream "https://$GH_TOKEN@github.com/ankrypt/in-toto.git"
 #git fetch upstream
