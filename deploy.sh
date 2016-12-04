@@ -14,7 +14,7 @@ git init
 git checkout -b gh-pages
 git add .
 git -c user.name='ankrypt' -c user.email='ankitc@gmail.com' commit -m init
-git push -f -q https://ankrypt:$GH_TOKEN@github.com/ankrypt/in-toto-gh-pages gh-pages &2>/dev/null
+git push -f https://ankrypt:$GH_TOKEN@github.com/ankrypt/in-toto-gh-pages gh-pages &2>/dev/null
 
 #git remote add upstream "https://$GH_TOKEN@github.com/ankrypt/in-toto.git"
 #git fetch upstream
