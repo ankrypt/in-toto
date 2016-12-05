@@ -2,7 +2,7 @@
 
 set -ev
 
-new_chk=$(find ./in-toto/ -type f -exec md5sum {} \; | sort -k 2 | md5sum  | tr -d '\r ')
+new_chk=$(find ./demo/ -type f -exec md5sum {} \; | sort -k 2 | md5sum  | tr -d '\r ')
 orig_chk=$(cat ./project.chk | tr -d '\r ') 
 
 echo $new_chk
@@ -13,7 +13,7 @@ if [[ "$new_chk" == "$orig_chk" ]] ; then
     echo "[-]nothing changed, abort this push..." 1>&2
     exit 1
 else
-    echo -ne $(find ./in-toto/ -type f -exec md5sum {} \; | sort -k 2 | md5sum) > project.chk
+    echo -ne $(find ./demo/ -type f -exec md5sum {} \; | sort -k 2 | md5sum) > project.chk
     echo "[+]renew chksum file..."
     git add -A .
     git config --global user.email "ankitc@gmail.com"
