@@ -2,6 +2,7 @@
 
 set -ev
 
+
 new_chk=$(find ./demo/ -type f -exec md5sum {} \; | sort -k 2 | md5sum  | tr -d '\r ')
 orig_chk=$(cat ./project.chk | tr -d '\r ') 
 
